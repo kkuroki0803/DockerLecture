@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  ubuntu:
+    build: .
+    container_name: ubuntu-study
+    stdin_open: true       # コンソール入力を有効化
+    tty: true              # ターミナルを使えるようにする
+    volumes:
+      - .:/workspace       # ホストとコンテナで作業フォルダを共有
+    working_dir: /workspace
